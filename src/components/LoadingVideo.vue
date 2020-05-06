@@ -3,13 +3,13 @@
  * @file: description
  * @Date: 2020-05-04 17:30:22
  * @LastEditors: yangwenjie
- * @LastEditTime: 2020-05-04 22:48:59
+ * @LastEditTime: 2020-05-05 20:35:43
  -->
 <template>
     <div>
         <video 
             id ="loading" 
-            src="https://paabuu.github.io/oysy/video.mp4" 
+            src="https://paabuu.github.io/lxy/video.mp4" 
             width="100%" height="100%" 
             autoplay="true"
             muted="muted"
@@ -19,7 +19,7 @@
         </video>
         <video 
             id ="video1" 
-            src="https://paabuu.github.io/oysy/video.mp4" 
+            src="https://paabuu.github.io/lxy/video.mp4" 
             width="100%" height="100%" 
             muted="muted"
         >

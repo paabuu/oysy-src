@@ -3,7 +3,7 @@
  * @file: description
  * @Date: 2020-05-04 17:30:22
  * @LastEditors: yangwenjie
- * @LastEditTime: 2020-05-04 23:04:32
+ * @LastEditTime: 2020-05-05 20:35:56
  -->
 <template>
 <div class="page-3">
@@ -60,7 +60,7 @@ export default {
           index = `00${i}`;
         }
 
-        const url = `https://paabuu.github.io/oysy/360/v001_0${index}.png`;
+        const url = `https://paabuu.github.io/lxy/360/v001_0${index}.png`;
         var img = new Image();
         img.src = url;
         img.crossOrigin = "Anonymous";
