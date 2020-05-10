@@ -3,7 +3,7 @@
  * @file: description
  * @Date: 2020-05-04 17:30:22
  * @LastEditors: yangwenjie
- * @LastEditTime: 2020-05-05 20:35:56
+ * @LastEditTime: 2020-05-10 20:31:41
  -->
 <template>
 <div class="page-3">
@@ -74,7 +74,7 @@ export default {
                     curImage++;
                     if (curImage >= 180 / STEP) curImage = 0;
                     ctx.clearRect(0, 0, imgW, imgH);
-                    ctx.drawImage(images[curImage], 0, 0, imgW, imgH);
+                    ctx.drawImage(images[curImage], 70, 70, 310, 660, 0, 0, imgW, imgH);
                 }, 100);
             }
         };
@@ -122,7 +122,8 @@ export default {
         }
 
         ctx.clearRect(0, 0, imgW, imgH);
-        ctx.drawImage(images[curImage], 0, 0, imgW, imgH);
+        // ctx.drawImage(images[curImage], 0, 0, imgW, imgH);
+        ctx.drawImage(images[curImage], 70, 70, 310, 660, 0, 0, imgW, imgH);
     })
   }
 }

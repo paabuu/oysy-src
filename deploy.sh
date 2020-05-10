@@ -3,17 +3,17 @@
  # @file: description
  # @Date: 2020-05-04 18:38:15
  # @LastEditors: yangwenjie
- # @LastEditTime: 2020-05-04 18:45:28
+ # @LastEditTime: 2020-05-10 22:02:10
  ###
 yarn build
 
 cd ../
 
-rm -rf ./oysy/js
-rm -rf ./oysy/css
-rm -rf ./oysy/img
+rm -rf ./lxy/js
+rm -rf ./lxy/css
+rm -rf ./lxy/img
 
-cd ./oysy/
+cd ./lxy/
 
 mv ../oysy-src/dist/* .
 

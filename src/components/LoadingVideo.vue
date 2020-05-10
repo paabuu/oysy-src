@@ -3,7 +3,7 @@
  * @file: description
  * @Date: 2020-05-04 17:30:22
  * @LastEditors: yangwenjie
- * @LastEditTime: 2020-05-05 20:35:43
+ * @LastEditTime: 2020-05-10 22:09:50
  -->
 <template>
     <div>
@@ -19,9 +19,10 @@
         </video>
         <video 
             id ="video1" 
-            src="https://paabuu.github.io/lxy/video.mp4" 
+            src="https://paabuu.github.io/lxy/v1.mp4" 
             width="100%" height="100%" 
             muted="muted"
+            preload="false"
         >
             <source src="movie.mp4" type="video/mp4">
             <source src="movie.ogg" type="video/ogg">
