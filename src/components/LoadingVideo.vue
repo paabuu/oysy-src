@@ -3,7 +3,7 @@
  * @file: description
  * @Date: 2020-05-04 17:30:22
  * @LastEditors: yangwenjie
- * @LastEditTime: 2020-05-10 22:09:50
+ * @LastEditTime: 2020-05-14 01:45:36
  -->
 <template>
     <div>
@@ -40,13 +40,18 @@ export default {
   },
   mounted() {
       const loadingVideo = document.getElementById('loading');
-      const video1 = document.getElementById('video1');
       loadingVideo.play();
 
-      loadingVideo.addEventListener('ended', () => {
-          loadingVideo.style.display = 'none';
-          video1.play();
-      });
+    //   const index = Math.ceil(Math.random() * 5);
+    const index = 1;
+    loadingVideo.addEventListener('ended', () => {
+        const video = document.getElementById(`video${index}`);
+        video.addEventListener('ended', () => {
+            this.$router.push('/e');
+        });
+        loadingVideo.style.display = 'none';
+        video.play();
+    });
   }
 }
 </script>
@@ -59,6 +64,10 @@ video {
     width: 100vw;
     height: 100vh;
     object-fit:fill
+}
+
+#loading::-webkit-media-controls {
+  display:none !important;
 }
 
 #loading {

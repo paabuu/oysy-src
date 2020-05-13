@@ -3,10 +3,10 @@
  * @file: description
  * @Date: 2020-05-04 17:30:22
  * @LastEditors: yangwenjie
- * @LastEditTime: 2020-05-04 19:14:06
+ * @LastEditTime: 2020-05-14 01:34:06
  -->
 <template>
-    <div class="page page-1" @click="onClick()">
+    <div class="page page-1">
         <div class="title"></div>
         <div class="copy-right"></div>
     </div>
@@ -16,10 +16,10 @@
 
 export default {
   name: 'StartPage',
-  methods: {
-    onClick: function() {
-      this.$router.push('/s')
-    }
+  mounted: function() {
+    setTimeout(() => {
+        this.$router.push('/s');
+    }, 4000);
   }
 }
 </script>

@@ -3,7 +3,7 @@
 * @file: description
 * @Date: 2020-05-04 17:30:22
 * @LastEditors: yangwenjie
-* @LastEditTime: 2020-05-04 22:29:50
+* @LastEditTime: 2020-05-14 00:35:25
  */
 import Vue from 'vue'
 import VueRouter from 'vue-router';
@@ -13,6 +13,7 @@ import StartPage from './components/Start.vue'
 import SelectHole from './components/Select.vue';
 import SilkWorm from './components/Silkworm.vue';
 import LoadingVideo from './components/LoadingVideo.vue';
+import EndPage from './components/End.vue';
 
 Vue.config.productionTip = false
 
@@ -24,6 +25,7 @@ const routes = [
   { path: '/s', component: SelectHole },
   { path: '/c', component: SilkWorm },
   { path: '/v', component: LoadingVideo },
+  { path: '/e', component: EndPage },
 ];
 
 const router = new VueRouter({ routes });
