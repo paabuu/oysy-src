@@ -3,7 +3,7 @@
  * @file: description
  * @Date: 2020-05-04 17:30:22
  * @LastEditors: yangwenjie
- * @LastEditTime: 2020-05-14 01:37:44
+ * @LastEditTime: 2020-05-17 23:07:40
  -->
 <template>
 <div class="page-3">
@@ -60,10 +60,10 @@ export default {
           index = `00${i}`;
         }
 
-        const url = `https://paabuu.github.io/lxy/360/v001_0${index}.png`;
+        const url = `http://lxy-asset.meizitoday.com/img/v001_0${index}.png`;
         var img = new Image();
+        img.crossOrigin = "anonymous";
         img.src = url;
-        img.crossOrigin = "Anonymous";
         img.onload = () => {
             completedImageCount++;
             ctx.clearRect(0, 0, imgW, imgH);
@@ -91,6 +91,7 @@ export default {
         const clientY = touch.clientY;
         const data = ctx.getImageData(clientX, clientY, 1, 1).data;
         if (data[0] > 200 || data[1] > 200 || data[2] > 200) {
+            
             this.$router.push('/v');
         }
 

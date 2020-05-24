@@ -8,7 +8,7 @@
 <template>
     <div class="page page-5">
         <div class="box">
-            <div class="icon"></div>
+            <div class="icon" @click="backHome()"></div>
             <p class="text1">想来一剂精神返野剂？</p>
             <p class="text2">fu致这段话￥s0pc1noW8cZ￥打開👉🍑宝👈【PsychoPlacebo】</p>
             <div 
@@ -33,6 +33,9 @@ export default {
   methods: {
       afterCopy: function() {
         this.hasCopyed = true;
+      },
+      backHome: function() {
+        this.$router.push('/');
       }
   },
   mounted: function() {

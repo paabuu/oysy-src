@@ -9,7 +9,7 @@
     <div>
         <video 
             id ="loading" 
-            src="https://paabuu.github.io/lxy/video.mp4" 
+            src="http://lxy-asset.meizitoday.com/video/loading.mp4" 
             width="100%" height="100%" 
             autoplay="true"
             muted="muted"
@@ -19,7 +19,87 @@
         </video>
         <video 
             id ="video1" 
-            src="https://paabuu.github.io/lxy/v1.mp4" 
+            src="http://lxy-asset.meizitoday.com/video/1.mp4" 
+            width="100%" height="100%" 
+            muted="muted"
+            preload="false"
+        >
+            <source src="movie.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+        </video>
+        <video 
+            id ="video2" 
+            src="http://lxy-asset.meizitoday.com/video/2.mp4" 
+            width="100%" height="100%" 
+            muted="muted"
+            preload="false"
+        >
+            <source src="movie.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+        </video>
+        <video 
+            id ="video3" 
+            src="http://lxy-asset.meizitoday.com/video/3.mp4" 
+            width="100%" height="100%" 
+            muted="muted"
+            preload="false"
+        >
+            <source src="movie.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+        </video>
+        <video 
+            id ="video4" 
+            src="http://lxy-asset.meizitoday.com/video/4.mp4" 
+            width="100%" height="100%" 
+            muted="muted"
+            preload="false"
+        >
+            <source src="movie.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+        </video>
+        <video 
+            id ="video5" 
+            src="http://lxy-asset.meizitoday.com/video/5.mp4" 
+            width="100%" height="100%" 
+            muted="muted"
+            preload="false"
+        >
+            <source src="movie.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+        </video>
+        <video 
+            id ="video6" 
+            src="http://lxy-asset.meizitoday.com/video/6.mp4" 
+            width="100%" height="100%" 
+            muted="muted"
+            preload="false"
+        >
+            <source src="movie.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+        </video>
+        <video 
+            id ="video7" 
+            src="http://lxy-asset.meizitoday.com/video/7.mp4" 
+            width="100%" height="100%" 
+            muted="muted"
+            preload="false"
+        >
+            <source src="movie.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+        </video>
+        <video 
+            id ="video8" 
+            src="http://lxy-asset.meizitoday.com/video/8.mp4" 
+            width="100%" height="100%" 
+            muted="muted"
+            preload="false"
+        >
+            <source src="movie.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+        </video>
+        <video 
+            id ="video9" 
+            src="http://lxy-asset.meizitoday.com/video/9.mp4" 
             width="100%" height="100%" 
             muted="muted"
             preload="false"
@@ -42,15 +122,18 @@ export default {
       const loadingVideo = document.getElementById('loading');
       loadingVideo.play();
 
-    //   const index = Math.ceil(Math.random() * 5);
-    const index = 1;
+      const index = Math.ceil(Math.random() * 9);
     loadingVideo.addEventListener('ended', () => {
         const video = document.getElementById(`video${index}`);
+        video.style.display = 'block';
         video.addEventListener('ended', () => {
             this.$router.push('/e');
         });
         loadingVideo.style.display = 'none';
         video.play();
+        setTimeout(() => {
+            video.muted = false;
+        }, 3000);
     });
   }
 }
@@ -72,6 +155,10 @@ video {
 
 #loading {
     z-index: 10;
+}
+
+video:not(:nth-of-type(1)) {
+    display: none;
 }
 
 
