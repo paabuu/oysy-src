@@ -35,7 +35,7 @@ export default {
         this.hasCopyed = true;
       },
       backHome: function() {
-        this.$router.push('/');
+        this.$router.push('/c');
       }
   },
   mounted: function() {
